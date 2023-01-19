@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="783.0" style="-fx-background-color: #000023;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane layoutY="1.0" prefHeight="508.0" prefWidth="180.0" style="-fx-background-color: black;">
+         <children>
+            <Label layoutX="6.0" layoutY="7.0" prefHeight="43.0" prefWidth="174.0" text="Xprinter 5G" textFill="#f1421b">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
+               </font>
+            </Label>
+            <Line endX="65.0" layoutX="106.0" layoutY="50.0" startX="-100.0" stroke="WHITE" />
+            <Label contentDisplay="CENTER" layoutX="22.0" layoutY="224.0" prefHeight="42.0" prefWidth="148.0" text="Delivery" textFill="#f1421b">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="35.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="399.0" prefHeight="35.0" prefWidth="127.0" text="powered by" textFill="#f1421b">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="22.0" />
+               </font>
+            </Label>
+            <Line endX="62.0" layoutX="95.0" layoutY="435.0" startX="-63.5" stroke="WHITE" />
+            <Hyperlink cacheShape="false" centerShape="false" focusTraversable="false" layoutX="20.0" layoutY="433.0" onAction="#getYoussefInfo" pickOnBounds="false" prefHeight="29.0" prefWidth="162.0" scaleShape="false" text="Youssef alkhodary" textFill="#1a00ff">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink cacheShape="false" centerShape="false" focusTraversable="false" layoutX="36.0" layoutY="450.0" onAction="#getMousaInfo" pickOnBounds="false" prefHeight="28.0" prefWidth="119.0" scaleShape="false" text="Mousa ahmed" textFill="#1a00ff">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="15.0" fitWidth="21.0" layoutX="5.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Instagram.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="15.0" fitWidth="21.0" layoutX="5.0" layoutY="457.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@facebook.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TextArea fx:id="payloadDisplayArea" layoutX="199.0" layoutY="67.0" prefHeight="197.0" prefWidth="566.0" promptText="Display Area">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextArea>
+      <Label layoutX="397.0" layoutY="282.0" prefHeight="31.0" prefWidth="208.0" text="Delivery Payload" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="244.0" layoutY="370.0" prefHeight="27.0" prefWidth="78.0" text="file name" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="FilePathField" alignment="CENTER" layoutX="552.0" layoutY="372.0" promptText="C:\Users\example\Desktop" />
+      <TextField fx:id="FileNameField" alignment="CENTER" layoutX="322.0" layoutY="372.0" promptText="file name" />
+      <Label layoutX="478.0" layoutY="371.0" prefHeight="27.0" prefWidth="67.0" text="file path" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="511.0" layoutY="422.0" text="High performance devices only*" textFill="RED">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="218.0" layoutY="448.0" prefHeight="30.0" prefWidth="41.0" text="GUI" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="221.0" layoutY="326.0" prefHeight="29.0" prefWidth="41.0" text="Files" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </Label>
+      <Line endX="267.0" layoutX="494.0" layoutY="315.0" startX="-295.0" />
+      <JFXButton layoutX="697.0" layoutY="265.0" onAction="#ClearDisplayArea" prefHeight="21.0" prefWidth="67.0" stylesheets="@roundRedButton.css" text="Clear" />
+      <JFXButton layoutX="259.0" layoutY="449.0" onAction="#dotsPayload" prefHeight="29.0" prefWidth="107.0" stylesheets="@richBlueButton.css" text="10K Dots Payload">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="629.0" layoutY="327.0" onAction="#FileSympolPayload" prefHeight="28.0" prefWidth="101.0" stylesheets="@richBlueButton.css" text="10K Extra File">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="371.0" layoutY="449.0" onAction="#characterPayload" prefHeight="29.0" prefWidth="114.0" stylesheets="@richBlueButton.css" text="10K Chars Payload">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="283.0" layoutY="327.0" onAction="#FileDotsPayload" prefHeight="28.0" prefWidth="101.0" stylesheets="@richBlueButton.css" text="100K Dots File">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="400.0" layoutY="327.0" onAction="#FileCharacterPayload" prefHeight="28.0" prefWidth="101.0" stylesheets="@richBlueButton.css" text="100K Chars File">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="514.0" layoutY="327.0" onAction="#FileRandomPayload" prefHeight="28.0" prefWidth="101.0" stylesheets="@richBlueButton.css" text="50K Randoms File">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="636.0" layoutY="450.0" onAction="#sympolPayload" prefHeight="28.0" prefWidth="120.0" stylesheets="@roundRedButton.css" text="Pharaonic Payload">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="505.0" layoutY="450.0" onAction="#randomPayload" prefHeight="29.0" prefWidth="120.0" stylesheets="@roundRedButton.css" text="Randoms Payload">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="620.0" layoutY="265.0" onAction="#copyToClipboard" prefHeight="21.0" prefWidth="67.0" stylesheets="@darkCopyButton.css" text="Copy" />
+      <Line endX="273.0" layoutX="488.0" layoutY="412.0" startX="-288.0" />
+      <Line endX="-26.0" endY="-21.0" layoutX="521.0" layoutY="516.0" startX="-26.0" startY="-83.0" stroke="RED" strokeDashOffset="4.0" strokeWidth="3.0" />
+      <Line endX="-26.0" endY="-21.0" layoutX="787.0" layoutY="516.0" startX="-26.0" startY="-83.0" stroke="RED" strokeDashOffset="4.0" strokeWidth="3.0" />
+      <ToolBar layoutX="180.0" prefHeight="59.0" prefWidth="603.0" style="-fx-background-color: black;">
+         <items>
+            <JFXButton onAction="#changeToCustomPayload" prefHeight="25.0" prefWidth="193.0" stylesheets="@darkBlueButton.css" text="Custom" />
+            <JFXButton layoutX="10.0" layoutY="13.0" onAction="#changeToWriter" prefHeight="36.0" prefWidth="191.0" stylesheets="@darkBlueButton.css" text="Writer" />
+            <JFXButton layoutX="214.0" layoutY="13.0" onAction="#changeToDeliveryPayload" prefHeight="36.0" prefWidth="194.0" stylesheets="@darkBlueButton.css" text="Delivery" />
+         </items>
+      </ToolBar>
+   </children>
+</Pane>

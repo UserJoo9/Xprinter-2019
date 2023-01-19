@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="799.0" style="-fx-background-color: #000023;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane prefHeight="613.0" prefWidth="195.0" style="-fx-background-color: black;">
+         <children>
+            <Label layoutX="15.0" layoutY="15.0" prefHeight="43.0" prefWidth="167.0" text="Xprinter 5G" textFill="#f1421b">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
+               </font>
+            </Label>
+            <Line endX="66.0" layoutX="115.0" layoutY="56.0" startX="-100.0" stroke="WHITE" />
+            <Label layoutX="36.0" layoutY="443.0" prefHeight="35.0" prefWidth="127.0" text="powered by" textFill="#f1421b">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="22.0" />
+               </font>
+            </Label>
+            <Line endX="62.0" layoutX="100.0" layoutY="479.0" startX="-63.5" stroke="WHITE" />
+            <Hyperlink cacheShape="false" centerShape="false" focusTraversable="false" layoutX="25.0" layoutY="477.0" onAction="#getYoussefInfo" pickOnBounds="false" prefHeight="29.0" prefWidth="162.0" scaleShape="false" text="Youssef alkhodary" textFill="#1a00ff">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink cacheShape="false" centerShape="false" focusTraversable="false" layoutX="41.0" layoutY="494.0" onAction="#getMousaInfo" pickOnBounds="false" prefHeight="28.0" prefWidth="119.0" scaleShape="false" text="Mousa ahmed" textFill="#1a00ff">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="16.0" />
+               </font>
+            </Hyperlink>
+            <ImageView fitHeight="15.0" fitWidth="21.0" layoutX="10.0" layoutY="484.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Instagram.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="15.0" fitWidth="21.0" layoutX="10.0" layoutY="501.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@facebook.png" />
+               </image>
+            </ImageView>
+            <Label contentDisplay="CENTER" layoutX="43.0" layoutY="263.0" prefHeight="44.0" prefWidth="110.0" text="Writer" textFill="#f1421b">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextArea fx:id="payloadDisplayArea" layoutX="216.0" layoutY="73.0" prefHeight="245.0" prefWidth="569.0" promptText="Display Area">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextArea>
+      <TextField fx:id="sourceWord" alignment="CENTER" layoutX="470.0" layoutY="388.0" promptText="old word" />
+      <Label layoutX="254.0" layoutY="358.0" prefHeight="27.0" prefWidth="177.0" text="word || paragraph" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="663.0" layoutY="361.0" prefHeight="27.0" prefWidth="67.0" text="file name" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </Label>
+      <Line endX="100.0" layoutX="341.0" layoutY="359.0" startX="-100.0" />
+      <Label contentDisplay="CENTER" layoutX="311.0" layoutY="330.0" text="Writer" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="21.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="paragraphField" layoutX="238.0" layoutY="388.0" prefHeight="204.0" prefWidth="209.0" promptText="type you want here" />
+      <TextField fx:id="FilePathField" alignment="CENTER" layoutX="628.0" layoutY="451.0" promptText="C:\Users\example\Desktop" />
+      <TextField fx:id="FileNameField" alignment="CENTER" layoutX="628.0" layoutY="388.0" promptText="file name" />
+      <Label layoutX="669.0" layoutY="424.0" prefHeight="27.0" prefWidth="67.0" text="file path" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="511.0" layoutY="361.0" prefHeight="27.0" prefWidth="67.0" text="old word" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="destinationWord" alignment="CENTER" layoutX="470.0" layoutY="451.0" promptText="new word" />
+      <Label layoutX="511.0" layoutY="424.0" prefHeight="27.0" prefWidth="78.0" text="new word" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="717.0" layoutY="318.0" onAction="#ClearDisplayArea" prefHeight="21.0" prefWidth="67.0" stylesheets="@roundRedButton.css" text="Clear" />
+      <JFXButton layoutX="493.0" layoutY="509.0" onAction="#CustomWriter" prefHeight="43.0" prefWidth="102.0" stylesheets="@darkBlueButton.css" text="Genrate">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="643.0" layoutY="509.0" onAction="#FileCustomWriter" prefHeight="43.0" prefWidth="102.0" stylesheets="@darkBlueButton.css" text="File Genrate">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="640.0" layoutY="318.0" onAction="#copyToClipboard" prefHeight="21.0" prefWidth="67.0" stylesheets="@darkCopyButton.css" text="Copy" />
+      <ToolBar layoutX="195.0" prefHeight="59.0" prefWidth="603.0" style="-fx-background-color: black;">
+         <items>
+            <JFXButton onAction="#changeToCustomPayload" prefHeight="25.0" prefWidth="193.0" stylesheets="@darkBlueButton.css" text="Custom" />
+            <JFXButton layoutX="10.0" layoutY="13.0" onAction="#changeToWriter" prefHeight="36.0" prefWidth="191.0" stylesheets="@darkBlueButton.css" text="Writer" />
+            <JFXButton layoutX="214.0" layoutY="13.0" onAction="#changeToDeliveryPayload" prefHeight="36.0" prefWidth="194.0" stylesheets="@darkBlueButton.css" text="Delivery" />
+         </items>
+      </ToolBar>
+   </children>
+</Pane>
